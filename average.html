@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <h1>Better than average</h1>
+
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>ID</th>
+            <th>Broj indeksa</th>
+            <th>Ime i prezime</th>
+            <th>Godina rodjenja</th>
+            <th>Sifra</th>
+            <th>Prosek</th>
+            <th>Polozeni ispiti</th>
+        </tr>
+
+        {% for k in korisnici %}
+        <tr>
+            <td>{{ k[0] }}</td>
+            <td>{{ k[1] }}</td>
+            <td>{{ k[2] }}</td>
+            <td>{{ k[3] }}</td>
+            <td>{{ k[4] }}</td>
+            <td>{{ k[5] }}</td>
+            <td>{{ k[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

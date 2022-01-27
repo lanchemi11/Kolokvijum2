@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update</h1>
+    <form action="/update/{{ korisnik[1] }}" method="POST">
+        <p>
+            <label for="indeks">Broj indeksa</label>
+            <input type="text" name="indeks" value="{{ korisnik[1] }}" readonly>
+        </p>
+
+        <p>
+            <label for="ime_prezime">Ime i prezime</label>
+            <input type="text" name="ime_prezime" value="{{ korisnik[2] }}">
+        </p>
+
+        <p>
+            <label for="godina">Godina rodjenja</label>
+            <input type="number" name="godina" value="{{ korisnik[3] }}">
+        </p>
+
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" value="{{ korisnik[4] }}">
+        </p>
+
+        <p>
+            <label for="confirm">Confirm password</label>
+            <input type="password" name="confirm">
+            <span>{{ confirm_error }}</span>
+        </p>
+
+        <p>
+            <label for="prosek">Prosek</label>
+            <input type="number" step="0.01" name="prosek" value="{{ korisnik[5] }}">
+            <span>{{ prosek_error }}</span>
+        </p>
+
+        <p>
+            <label for="ispiti">Broj polozenih ispita</label>
+            <input type="number" name="ispiti" value="{{ korisnik[6] }}">
+            <span>{{ ispiti_error }}</span>
+        </p>
+
+        <p>
+            <input type="submit" value="Save">
+        </p>
+    </form>
+</body>
+</html>
